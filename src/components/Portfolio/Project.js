@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Project extends Component {
   render() {
-    let { name, languagesIcons, picture, source } = this.props.item; 
+    let { name, languagesIcons, picture, source, description } = this.props.item; 
 
     return (
         <div className='project'>
@@ -11,8 +11,9 @@ export default class Project extends Component {
               <i className={icon} key={icon}></i>
             )}
           </div>
-          <img src={picture} alt={name} style={{ width: '300px', height: '280px' }} />
+          <img src={picture} alt={name} style={{ width: '300px', height: '180px' }} />
           <h3>{name}</h3>
+          <p>{description}</p>
       <a href={source} target="_blank" rel="noopener noreferrer"> 
           <div className="project-button">
           <i className="fa-solid fa-bullseye"></i>
